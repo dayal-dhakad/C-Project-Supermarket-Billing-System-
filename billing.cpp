@@ -29,29 +29,30 @@ m:
     string email;
     string password;
 
-    cout << "\t\t\t\t______________________________\n";
-    cout << "\t\t\t\t                              \n";
-    cout << "\t\t\t\t    SUPERMARKET MAIN MENU     \n";
-    cout << "\t\t\t\t                              \n";
-    cout << "\t\t\t\t______________________________\n";
-    cout << "\t\t\t\t                              \n";
-    cout << "\t\t\t\t|   1) Administrator   | \n";
-    cout << "\t\t\t\t|                      | \n";
-    cout << "\t\t\t\t|   2) Buyer           | \n";
-    cout << "\t\t\t\t|                      | \n";
-    cout << "\t\t\t\t|   3) Exit            | \n";
-    cout << "\t\t\t\t|                      | \n";
-    cout << "\n\t\t\t  Please Select!  ";
+    cout << "\t\t\t\t\t\t ______________________________\n";
+    cout << "\t\t\t\t\t\t|                              |\n";
+    cout << "\t\t\t\t\t\t|    SUPERMARKET MAIN MENU     |\n";
+   // cout << "\t\t\t\t\t\t|                              | \n";
+    cout << "\t\t\t\t\t\t|______________________________|\n\n";
+    cout << "\t\t\t\t\t\t     ______________________\n";
+    cout << "\t\t\t\t\t\t    |                      | \n";
+    cout << "\t\t\t\t\t\t    |   1) Administrator   | \n";
+    cout << "\t\t\t\t\t\t    |                      | \n";
+    cout << "\t\t\t\t\t\t    |   2) Buyer           | \n";
+    cout << "\t\t\t\t\t\t    |                      | \n";
+    cout << "\t\t\t\t\t\t    |   3) Exit            | \n";
+    cout << "\t\t\t\t\t\t    |______________________| \n";
+    cout << "\n\t\t\t\t\t\t\t Please Select!  ";
     cin >> choice;
 
     switch (choice)
     {
     case 1:
         cout<<endl;
-        cout << "\t\t\t  Please Login \n\n";
-        cout << "\t\t\t  Enter Email  \n                          ";
+        cout << "\t\t\t\t\t\t\t Please Login \n\n";
+        cout << "\t\t\t\t\t\t\t Enter Email  \n     \t\t\t\t                        ";
         cin >> email;
-        cout << "\n\t\t\t Password     \n                          ";
+        cout << "\n\t\t\t\t\t\t\t Password     \n     \t\t\t\t                      ";
         cin >> password;
 
         if (email == "dayal@gmail.com" && password == "dayal@123")
@@ -121,8 +122,8 @@ void shopping ::buyer()
 {
 m:
     int choice;
-    cout << "\t\t\t Buyer   \n";
-    cout << "\t\t\t_________________   \n";
+    cout << "\t\t\t\t Buyer   \n";
+    cout << "\t\t\t_____________________   \n";
     cout << "                          \n";
     cout << "\t\t\t 1) Buy Product     \n";
     cout << "                          \n";
@@ -344,11 +345,11 @@ void shopping::receipt()
     {
         data.close();
         list();
-        cout<<"\n_____________________________________\n";
-        cout<<"\n|                                    \n";
-        cout<<"\n      Please place the order         \n";
-        cout<<"\n|                                    \n";
-        cout<<"\n_____________________________________\n";
+        cout<<"   ____________________________________\n";
+        cout<<"  |                                    |\n";
+        cout<<"  |      Please place the order        |\n";
+        cout<<"  |                                    |\n";
+        cout<<"  |____________________________________|\n";
 
         do
         {
@@ -372,8 +373,8 @@ void shopping::receipt()
 
         } while (choice == 'y');
         
-        cout<<"\n\n\t\t\t__________________RECEIPT__________________\n";
-        cout<<"\n Product No \t Product Name \t Product Quantity \t Price \t Amount \t Amount with discount \n";
+        cout<<"\n\n\t\t\t-----------------RECEIPT-------------------\n";
+        cout<<"\n Product No \t Product Name \t Product Quantity \t Price \t\t Amount \t Amount with discount \n";
         for(int i= 0; i<c; i++)
         {
             data.open("database.txt", ios::in);
@@ -386,15 +387,16 @@ void shopping::receipt()
                 amount = price*arrq[i];
                 dis = amount -(amount*dis/100);
                 total = total + dis;
-                cout<<"\n"<<pcode<<"\t\t"<< pname<<"\t\t"<< arrq[i]<<"\t\t"<< price<<"\t\t"<< amount<<"\t\t"<< dis;
+                cout<<"\n   "<<pcode<<"\t\t"<<"  "<< pname<<"\t\t\t "<< arrq[i]<<"\t\t "<< price<<"\t\t"<<" " <<amount<<"\t\t"<< dis;
                }
                data>>pcode>>pname>>price>>dis;
             }
         }
           data.close();
     }
-    cout<<"\n\n_____________________________";
-    cout<<"\n Total Amount : "<<total;
+    cout<<"\n\n---------------------------------------------------------------------------------------------";
+    cout<<"\n Total Amount : "<<total<<endl;
+    cout<<"-------------------------------------------------------------------------------------------------\n\n\n";
 
 }
 
