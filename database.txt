@@ -1,0 +1,4 @@
+ 1 milk 20 1
+ 2 chips 10 1
+ 3 butter 50 3
+ 5 honey 90 4
