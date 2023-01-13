@@ -28,11 +28,11 @@ m:
     int choice;
     string email;
     string password;
-
+    cout<<"\n\n---------------------------------------------------------------------------------------------------------------------------------------\n\n\n";
     cout << "\t\t\t\t\t\t ______________________________\n";
     cout << "\t\t\t\t\t\t|                              |\n";
     cout << "\t\t\t\t\t\t|    SUPERMARKET MAIN MENU     |\n";
-   // cout << "\t\t\t\t\t\t|                              | \n";
+ // cout << "\t\t\t\t\t\t|                              | \n";
     cout << "\t\t\t\t\t\t|______________________________|\n\n";
     cout << "\t\t\t\t\t\t     ______________________\n";
     cout << "\t\t\t\t\t\t    |                      | \n";
@@ -48,12 +48,19 @@ m:
     switch (choice)
     {
     case 1:
+        
+        cout<<"---------------------------------------------------------------------------------------------------------------------------------------";
         cout<<endl;
-        cout << "\t\t\t\t\t\t\t Please Login \n\n";
-        cout << "\t\t\t\t\t\t\t Enter Email  \n     \t\t\t\t                        ";
+        cout<<"\t\t\t\t\t\t\t ______________"<<endl;
+        
+        cout << "\t\t\t\t\t\t\t| Please Login |\n";
+        cout<<"\t\t\t\t\t\t\t|______________|"<<endl<<endl;
+        cout << "\t\t\t\t\t\t\t Enter Email  \n     \t\t\t\t                         ";
         cin >> email;
-        cout << "\n\t\t\t\t\t\t\t Password     \n     \t\t\t\t                      ";
+        cout << "\n\t\t\t\t\t\t\t Password     \n     \t\t\t\t                         ";
         cin >> password;
+        cout<<"\n\n---------------------------------------------------------------------------------------------------------------------------------------";
+
 
         if (email == "dayal@gmail.com" && password == "dayal@123")
         {
@@ -84,16 +91,16 @@ void shopping ::administrator()
 {
 m:
     int choice;
-    cout << "\n\n\n\t\t\t  Administrator Menu";
-    cout << "\n\t\t\t|___1) Add the product____|";
-    cout << "\n\t\t\t|                         |";
-    cout << "\n\t\t\t|___2) Modify the product_|";
-    cout << "\n\t\t\t|                         |";
-    cout << "\n\t\t\t|___3) Delete the product_|";
-    cout << "\n\t\t\t|                         |";
-    cout << "\n\t\t\t|___4) Back to main menu__|";
+    cout << "\n\n\t\t\t\t\t\t\tAdministrator Menu"<<endl;
+    cout << "\n\t\t\t\t\t\t    |___1) Add the product____|";
+    cout << "\n\t\t\t\t\t\t    |                         |";
+    cout << "\n\t\t\t\t\t\t    |___2) Modify the product_|";
+    cout << "\n\t\t\t\t\t\t    |                         |";
+    cout << "\n\t\t\t\t\t\t    |___3) Delete the product_|";
+    cout << "\n\t\t\t\t\t\t    |                         |";        
+    cout << "\n\t\t\t\t\t\t    |___4) Back to main menu__|";
 
-    cout << "\n\n\t Please enter your choice";
+    cout << "\n\n\t\t\t\t\t\t    Please enter your choice: ";
     cin >> choice;
 
     switch (choice)
@@ -112,7 +119,7 @@ m:
         break;
 
     default:
-        cout << "Invalid Choice";
+        cout << "\t\t\t\t\t\t    Invalid Choice";
         break;
     }
     goto m;
@@ -156,14 +163,14 @@ m:
     float d;
     string n;
 
-    cout << "\n\n\t\t\t Add new product";
-    cout << "\n\n\t Product code of the product";
+    cout << "\n\n\t\t\t\t\t\t     Add new product";
+    cout << "\n\n\t\t\t\t\t\t     Product code of the product: ";
     cin >> pcode;
-    cout << "\n\n\t Name of the product";
+    cout << "\n\n\t\t\t\t\t\t     Name of the product: ";
     cin >> pname;
-    cout << "\n\n\t Price of the product";
+    cout << "\n\n\t\t\t\t\t\t     Price of the product: ";
     cin >> price;
-    cout << "\n\n\t Discount on product";
+    cout << "\n\n\t\t\t\t\t\t     Discount on product: ";
     cin >> dis;
 
     data.open("database.txt", ios::in);
