@@ -1,8 +1,7 @@
  1milk 20 1
- 2 chees 250 20
+ 2 cheese 250 20
  3butter 50 3
  4sugar 30 1
  5honey 90 4
  7salt 20 2
- 87 vandana 0 100
- 11 vandana 0 100
+

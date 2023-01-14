@@ -397,6 +397,7 @@ void shopping::receipt()
                 cout<<"\n   "<<pcode<<"\t\t"<<"  "<< pname<<"\t\t\t "<< arrq[i]<<"\t\t "<< price<<"\t\t"<<" " <<amount<<"\t\t"<< dis;
                }
                data>>pcode>>pname>>price>>dis;
+               
             }
         }
           data.close();
