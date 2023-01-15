@@ -317,18 +317,22 @@ void shopping :: list()
 {
     fstream data;
     data.open("database.txt", ios::in);
-    cout<<"/n/n|________________________________________\n";
-    cout<<"ProNo\t\t Name \t\t Price \n";
-    cout<<"/n/n|________________________________________\n";
+    cout<<"\n\n____________________________________________\n";
+    cout<<"| ProNo\t\t Name \t\t Price      |\n";
+    cout<<"|___________________________________________|\n";
     data>>pcode>>pname>>price>>dis;
 
     while(!data.eof())
     {
-        cout<<pcode<<"\t\t"<<pname<<"\t\t"<<price<<"\n";
+        cout<<"  "<<pcode<<"\t\t"<<pname<<"\t\t"<<price<<"\n";
         data>>pcode>>pname>>price>>dis;
     }
     data.close();
+    
+    cout<<"---------------------------------------------\n";
+
 }
+
 
 void shopping::receipt()
 {
@@ -341,7 +345,7 @@ void shopping::receipt()
     float dis=0;
     float total = 0;
 
-    cout<<"\n\n\t\t\t RECEIPT";
+  //  cout<<"\n\n\t\t\t RECEIPT";
     data.open("database.txt", ios::in);
     if(!data)
     {
@@ -352,7 +356,7 @@ void shopping::receipt()
     {
         data.close();
         list();
-        cout<<"   ____________________________________\n";
+        cout<<" \n\n   ____________________________________\n";
         cout<<"  |                                    |\n";
         cout<<"  |      Please place the order        |\n";
         cout<<"  |                                    |\n";
