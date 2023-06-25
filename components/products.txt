@@ -1,0 +1,6 @@
+2 chaimasala 20 1
+5 milk 32 1
+8 tea 300 1
+3 sugar 23 2
+1 pen 5 0
+4 Elaichi 50 1
