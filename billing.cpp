@@ -3,6 +3,9 @@
 #include <vector>
 #include <string>
 
+//admin email: dayal@email.com
+//admin password: dayal@123
+
 using namespace std;
 
 class Market
@@ -65,7 +68,7 @@ m:
         cout << "\n\t\t\t\t\t\t\t Password    : ";
         cin >> password;
 
-        if (email == "d" && password == "d")
+        if (email == "dayal@email.com" && password == "dayal@123")
         {
             system("cls");
             administratorMenu();
@@ -339,11 +342,11 @@ void Market::removeProduct()
     {
         remove("products.txt");
         rename("temp.txt", "products.txt");
-        cout << "\nProduct removed successfully!\n";
+        cout << "\n\t\t\t\t\t\t Product removed successfully!\n\n\n";
     }
     else
     {
-        cout << "\nProduct not found!\n";
+        cout << "\t\t\t\t\t\t Product not found!\n\n\n";
     }
 }
 
@@ -454,6 +457,7 @@ void Market::generateReceipt()
     }
 
     system("cls");
+    cout<<endl<<endl<<endl<<endl<<endl;
     cout << "\t\t  _________________________________________________________________________________________________" << endl;
     cout << "\t\t |                                                                  |                              |" << endl;
     cout << "\t\t |        DHAKAD SUPER MART                                         |   DATE       : " << __DATE__ << "   |" << endl;
@@ -499,7 +503,7 @@ void Market::generateReceipt()
          << endl;
 
     int exit;
-    cout << "\t\t\t\t\t\t\t Back to main menu(Enter 0)" << endl;
+    cout << "\n\n\t\t\t\t\t\t\t Back to main menu(Enter 0) : ";
     cin >> exit;
     system("cls");
 }
